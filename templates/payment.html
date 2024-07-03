@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+</head>
+<body>
+    <h1>Payment</h1>
+    <p>Total Amount: ${{ total_amount }}</p>
+    <form method="post" action="{{ url_for('process_payment') }}">
+        <button type="submit" name="payment_method" value="card">Pay by Card</button>
+        <button type="submit" name="payment_method" value="cash">Pay by Cash</button>
+    </form>
+    <a href="{{ url_for('cancel_order') }}">Cancel Order</a>
+</body>
+</html>

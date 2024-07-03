@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+</head>
+<body>
+    <h1>Checkout</h1>
+    <p>Total Amount: ${{ total_amount }}</p>
+    <form action="/confirm_payment" method="POST">
+        <input type="hidden" name="order_id" value="{{ order_id }}">
+        <button type="submit" name="payment_method" value="cash">Cash Pay</button>
+        <button type="submit" name="payment_method" value="card">Card Pay</button>
+    </form>
+</body>
+</html>

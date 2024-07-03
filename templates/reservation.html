@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Reservation{% endblock %}
+
+{% block content %}
+<h1>Make a Reservation</h1>
+<form method="post" action="{{ url_for('reservation') }}">
+    <label for="customer_name">Name:</label>
+    <input type="text" id="customer_name" name="customer_name"><br>
+    <label for="contact_number">Contact Number:</label>
+    <input type="text" id="contact_number" name="contact_number"><br>
+    <label for="num_people">Number of People:</label>
+    <input type="number" id="num_people" name="num_people" min="1"><br>
+    <input type="submit" value="Submit">
+
+<!-- Display cancel reservation button if reservation_id exists -->
+{% endblock %}

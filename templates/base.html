@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Template</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('dinein') }}">Dine In</a></li>
+        <li><a href="{{ url_for('reservation') }}" class="yellow-button">Reservation</a></li>
+        <li><a href="{{ url_for('feedback') }}">Feedback</a></li>
+        <li><a href="{{ url_for('order_status') }}">Order Status</a></li>
+        <li><a href="{{ url_for('cancel_reservation') }}">Cancel Reservation</a></li>
+    </ul>
+    {% block content %}{% endblock %}
+</body>
+</html>

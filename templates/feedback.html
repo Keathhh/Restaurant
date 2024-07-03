@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Feedback{% endblock %}
+
+{% block content %}
+<h1>Feedback</h1>
+<form method="post" action="{{ url_for('feedback') }}">
+    <label for="customer_name">Name:</label>
+    <input type="text" id="customer_name" name="customer_name"><br>
+    <label for="feedback_text">Feedback:</label>
+    <textarea id="feedback_text" name="feedback_text"></textarea><br>
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

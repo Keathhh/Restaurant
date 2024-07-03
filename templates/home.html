@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Restaurant</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('dinein') }}" class="yellow-button">Dine In</a></li>
+            <li><a href="{{ url_for('reservation') }}" class="yellow-button">Reservation</a></li>
+            <li><a href="{{ url_for('order_status') }}" class="yellow-button">Order Status</a></li>
+        </ul>
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <br>
+        <p>&copy; 2024 Relaxing Koala. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

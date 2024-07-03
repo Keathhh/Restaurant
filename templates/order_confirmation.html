@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+</head>
+<body>
+    <h1>Order Confirmation</h1>
+    <p>Total Amount: ${{ total_amount }}</p>
+    <button onclick="showPaymentConfirmation('cash')">Cash Pay</button>
+    <button onclick="showPaymentConfirmation('card')">Card Pay</button>
+
+    <script>
+        function showPaymentConfirmation(paymentMethod) {
+            if (paymentMethod === 'cash' || paymentMethod === 'card') {
+                alert("We've received your payment. Thank you!");
+            }
+        }
+    </script>
+</body>
+</html>

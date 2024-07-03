@@ -1,0 +1,12 @@
+<!-- payment_options.html -->
+{% extends 'base.html' %}
+
+{% block title %}Payment Options{% endblock %}
+
+{% block content %}
+<h2>Payment Options</h2>
+<p>Total Amount: ${{ total_amount }}</p>
+<button onclick="cardPayment()">Card Pay</button>
+<button onclick="cashPayment()">Cash Pay</button>
+<button onclick="cancelOrder()">Cancel Order</button>
+{% endblock %}
